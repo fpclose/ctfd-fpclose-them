@@ -1,0 +1,95 @@
+/**
+ * Pipeline Background for CTFd Jumbotron
+ * Adapted from Ambient Canvas Backgrounds
+ */
+
+.pipeline-jumbotron {
+  position: relative;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+  min-height: 406px; /* 350px + 56px 导航栏高度 */
+  height: 406px;
+  padding: 0;
+  padding-top: 56px; /* 导航栏高度 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0 !important;
+  margin-bottom: 3rem !important; /* 增加下方间距 */
+}
+
+/* 底部虚化过渡效果 */
+.pipeline-jumbotron::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0) 0%,
+    rgba(13, 27, 42, 0.3) 30%,
+    rgba(13, 27, 42, 0.6) 60%,
+    rgba(13, 27, 42, 1) 100%
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+.pipeline-jumbotron .container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 1rem;
+  width: 100%;
+  margin-top: 30px; /* 向下微调 */
+}
+
+.pipeline-jumbotron h1 {
+  color: #0ab5e4;
+  text-shadow: 0 0 20px rgba(10, 181, 228, 0.5);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* Ensure text is readable over the animation */
+.pipeline-jumbotron .container > * {
+  position: relative;
+  z-index: 10;
+}
+
+/* Canvas overlay styling */
+.pipeline-jumbotron canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pipeline-jumbotron {
+    min-height: 306px; /* 250px + 56px */
+    height: 306px;
+  }
+  
+  .pipeline-jumbotron .container {
+    padding: 0 1rem;
+  }
+  
+  .pipeline-jumbotron h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .pipeline-jumbotron {
+    min-height: 406px; /* 350px + 56px */
+    height: 406px;
+  }
+}

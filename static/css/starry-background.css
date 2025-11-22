@@ -1,0 +1,541 @@
+/**
+ * Starry Night Background for Content Area
+ * 深邃星空背景 - 应用于内容区域
+ */
+
+/* 为 body 设置深蓝色渐变星空背景 */
+body {
+  background: linear-gradient(to bottom, #1a2a4e 0%, #0d1b2a 50%, #000000 100%);
+  background-attachment: fixed;
+  padding-top: 0 !important;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #e0e0e0 !important;
+}
+
+/* 星空层 - 使用伪元素创建更自然的星星效果 */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    /* 大星星 */
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(2px 2px at 60% 70%, white, transparent),
+    radial-gradient(2px 2px at 50% 50%, white, transparent),
+    radial-gradient(2px 2px at 80% 10%, white, transparent),
+    radial-gradient(2px 2px at 33% 80%, white, transparent),
+    radial-gradient(2px 2px at 85% 85%, white, transparent),
+    radial-gradient(2px 2px at 65% 55%, white, transparent),
+    radial-gradient(2px 2px at 15% 45%, white, transparent),
+    radial-gradient(2px 2px at 92% 22%, white, transparent),
+    radial-gradient(2px 2px at 38% 65%, white, transparent),
+    /* 中等星星 */
+    radial-gradient(1px 1px at 25% 15%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 75% 35%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 45% 55%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 88% 45%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 12% 75%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 55% 20%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 70% 90%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 30% 40%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 95% 65%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 18% 58%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 62% 12%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 42% 85%, rgba(255, 255, 255, 0.9), transparent),
+    /* 小星星 */
+    radial-gradient(1px 1px at 10% 20%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 90% 60%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 70% 40%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 15% 90%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 40% 20%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 25% 45%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 75% 25%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 45% 75%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 35% 15%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 55% 85%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 10% 60%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 95% 35%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 52% 48%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 78% 68%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 22% 82%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 68% 28%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 48% 92%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 82% 52%, rgba(255, 255, 255, 0.7), transparent);
+  background-size: 
+    400px 400px, 450px 450px, 500px 500px, 420px 420px, 480px 480px, 
+    460px 460px, 440px 440px, 490px 490px, 410px 410px, 470px 470px,
+    350px 350px, 380px 380px, 360px 360px, 390px 390px, 370px 370px,
+    400px 400px, 420px 420px, 380px 380px, 410px 410px, 390px 390px,
+    360px 360px, 400px 400px,
+    300px 300px, 320px 320px, 310px 310px, 330px 330px, 290px 290px, 
+    340px 340px, 305px 305px, 325px 325px, 315px 315px, 295px 295px,
+    310px 310px, 330px 330px, 300px 300px, 320px 320px, 290px 290px,
+    310px 310px, 320px 320px, 300px 300px;
+  background-position: 
+    0 0, 50px 80px, 190px 320px, 80px 110px, 170px 60px, 
+    230px 40px, 120px 100px, 40px 150px, 280px 90px, 140px 250px,
+    100px 200px, 210px 140px, 160px 70px, 90px 250px, 30px 180px,
+    250px 200px, 70px 60px, 200px 280px, 310px 120px, 20px 220px,
+    130px 30px, 260px 160px,
+    60px 240px, 180px 160px, 140px 30px, 200px 180px, 30px 270px, 
+    150px 120px, 220px 50px, 100px 290px, 270px 230px, 50px 130px,
+    190px 80px, 240px 220px, 80px 190px, 210px 110px, 20px 300px,
+    160px 260px, 290px 70px, 110px 210px;
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 1;
+}
+
+/* 添加微弱的星云效果 */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(92, 94, 231, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(10, 181, 228, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(92, 94, 231, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* 确保内容在星空背景之上 */
+.container:not(.modal-dialog .container),
+.jumbotron {
+  position: relative;
+  z-index: 10;
+}
+
+/* 降低挑战卡片的 z-index，避免遮挡模态框 */
+.challenge-card,
+.card {
+  z-index: 1 !important;
+}
+
+/* 确保按钮等可点击元素正常工作 */
+.btn:not(.modal .btn),
+.challenge-button:not(.modal .challenge-button),
+a:not(.modal a),
+button:not(.modal button),
+input:not(.modal input),
+select:not(.modal select),
+textarea:not(.modal textarea) {
+  position: relative;
+  z-index: 5;
+}
+
+/* 确保模态框及其相关元素在最上层 */
+/* backdrop 在 modal 下方 */
+.modal-backdrop {
+  z-index: 1049 !important;
+}
+
+/* 隐藏孤立的 modal-backdrop (没有对应打开的模态框) */
+.modal-backdrop:not(.show) {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* 只有显示时才显示，但不阻挡模态框 */
+.modal-backdrop.show {
+  display: block !important;
+  opacity: 0.5 !important;
+  visibility: visible !important;
+  pointer-events: none !important;
+  z-index: 1049 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* 重要：确保 backdrop 不覆盖 modal */
+.modal-backdrop.show + .modal,
+.modal.show {
+  isolation: isolate;
+  position: fixed;
+  z-index: 1050 !important;
+}
+
+/* modal 在 backdrop 上方 - 使用更高的优先级 */
+.modal,
+div.modal,
+#challenge-window.modal,
+.modal.fade,
+.modal.show {
+  z-index: 1050 !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-dialog,
+.modal .modal-dialog {
+  z-index: inherit;
+  margin: 1.75rem auto;
+  position: relative;
+}
+
+.modal-content,
+.modal .modal-content {
+  z-index: inherit;
+  position: relative;
+  background-color: #fff !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.6) !important;
+}
+
+/* 确保挑战弹窗在最上层 */
+#challenge-window {
+  z-index: 1051 !important;
+  isolation: isolate;
+  position: fixed;
+}
+
+#challenge-window .modal-dialog {
+  z-index: 1051 !important;
+  position: relative;
+}
+
+#challenge-window .modal-content {
+  z-index: 1051 !important;
+  position: relative;
+  background: #fff !important;
+  opacity: 1 !important;
+}
+
+/* 确保modal内容完全不透明 */
+.modal-content,
+.modal-dialog,
+#challenge-window .modal-body,
+#challenge-window .modal-header,
+#challenge-window .modal-footer {
+  background-color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* 弹窗内文字保持深色 */
+.modal *,
+.modal p,
+.modal span,
+.modal div,
+.modal label,
+.modal h1,
+.modal h2,
+.modal h3,
+.modal h4,
+.modal h5,
+.modal h6,
+.modal-content *,
+.modal-body *,
+.modal-header *,
+.modal-footer * {
+  color: #212529 !important;
+}
+
+/* 弹窗内的链接保持蓝色 */
+.modal a {
+  color: #0d6efd !important;
+}
+
+/* 弹窗内的按钮保持原有颜色 */
+.modal .btn {
+  color: inherit !important;
+}
+
+.modal .btn-primary {
+  color: #fff !important;
+}
+
+.modal .btn-secondary {
+  color: #fff !important;
+}
+
+.modal .btn-success {
+  color: #fff !important;
+}
+
+.modal .btn-danger {
+  color: #fff !important;
+}
+
+/* 确保模态框内的所有元素可交互 */
+.modal *,
+.modal a,
+.modal button,
+.modal input,
+.modal select,
+.modal textarea,
+.modal .btn,
+.modal form {
+  position: relative;
+  pointer-events: auto;
+}
+
+/* 确保模态框完整显示 */
+.modal.show {
+  display: flex !important;
+  align-items: center;
+}
+
+.modal.show .modal-dialog {
+  max-width: 90%;
+  margin: auto;
+}
+
+
+
+/* 移除导航栏和 jumbotron 之间的留白 */
+.navbar {
+  margin-bottom: 0 !important;
+}
+
+/* 确保主内容区域从页面顶部开始 */
+main {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  flex: 1;
+}
+
+/* 为内容区域添加半透明深色背景，提高可读性 */
+body > .container {
+  background: rgba(13, 27, 42, 0.75);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 表格样式优化 - 适配深色背景 */
+.table {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+}
+
+.table thead {
+  background: rgba(10, 181, 228, 0.2);
+  color: #0ab5e4;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.table-hover tbody tr:hover {
+  background: rgba(10, 181, 228, 0.1);
+  color: #0ab5e4;
+}
+
+/* 卡片样式优化 */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(10, 181, 228, 0.2);
+  color: #e0e0e0;
+}
+
+.card-header {
+  background: rgba(10, 181, 228, 0.15);
+  border-bottom: 1px solid rgba(10, 181, 228, 0.2);
+  color: #0ab5e4;
+}
+
+/* 链接样式优化 */
+a {
+  color: #0ab5e4 !important;
+}
+
+a:hover {
+  color: #5c5ee7 !important;
+}
+
+/* 标题颜色 */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff !important;
+}
+
+/* 段落和文本颜色 */
+p, span, div, label {
+  color: #e0e0e0;
+}
+
+/* 文本颜色优化 */
+.text-muted {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* 确保 Pipeline jumbotron 不受影响 */
+.pipeline-jumbotron {
+  z-index: 10;
+  margin-bottom: 0;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 导航栏保持在最上层 */
+.navbar {
+  position: relative;
+  z-index: 1030;
+}
+
+/* 底部容器样式 */
+body > .container.text-center {
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  padding: 1rem;
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
+}
+
+body > .container.text-center a {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+body > .container.text-center a:hover {
+  color: #0ab5e4;
+}
+
+/* 搜索框和表单优化 */
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(10, 181, 228, 0.3);
+  color: #e0e0e0;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #0ab5e4;
+  color: #e0e0e0;
+  box-shadow: 0 0 0 0.2rem rgba(10, 181, 228, 0.25);
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(10, 181, 228, 0.3);
+  color: #e0e0e0;
+}
+
+/* 按钮样式优化 */
+.btn-primary {
+  background: linear-gradient(135deg, #0ab5e4, #5c5ee7);
+  border: none;
+  box-shadow: 0 4px 12px rgba(10, 181, 228, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5c5ee7, #0ab5e4);
+  box-shadow: 0 6px 16px rgba(10, 181, 228, 0.4);
+}
+
+/* 徽章样式优化 */
+.badge {
+  background: rgba(10, 181, 228, 0.2);
+  color: #0ab5e4;
+  border: 1px solid rgba(10, 181, 228, 0.3);
+}
+
+.badge.bg-primary {
+  background: rgba(10, 181, 228, 0.3) !important;
+  color: #0ab5e4;
+}
+
+.badge.bg-secondary {
+  background: rgba(92, 94, 231, 0.3) !important;
+  color: #5c5ee7;
+}
+
+.badge.bg-success {
+  background: rgba(40, 167, 69, 0.3) !important;
+  color: #28a745;
+}
+
+/* 分页样式优化 */
+.page-select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(10, 181, 228, 0.3);
+  color: #e0e0e0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* 警告框样式优化 */
+.alert {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(10, 181, 228, 0.2);
+  color: #e0e0e0;
+}
+
+.alert-info {
+  background: rgba(10, 181, 228, 0.1);
+  border-color: rgba(10, 181, 228, 0.3);
+  color: #0ab5e4;
+}
+
+/* ECharts 图表文字颜色 */
+#score-graph,
+#score-graph * {
+  color: #ffffff !important;
+}
+
+/* ECharts 图表标题和标签 */
+#score-graph text,
+#score-graph tspan {
+  fill: #ffffff !important;
+}
+
+/* ECharts 坐标轴文字 */
+#score-graph .echarts text {
+  fill: #ffffff !important;
+}
+
+/* 图表容器标题 */
+#score-graph h3,
+#score-graph h4,
+#score-graph .chart-title {
+  color: #ffffff !important;
+}
+
+/* 工具提示文字 */
+.echarts-tooltip,
+.echarts-tooltip * {
+  color: #333 !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  body > .container {
+    padding: 1rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .pipeline-jumbotron {
+    margin-bottom: 2rem !important;
+  }
+}
+
+/* 微弱闪烁星星动画效果 */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+}
+
+body::after {
+  animation: twinkle 4s ease-in-out infinite;
+}

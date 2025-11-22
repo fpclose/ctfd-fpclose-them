@@ -1,0 +1,62 @@
+/**
+ * Challenge Card Light Text Styles
+ * 挑战卡片浅色文字样式
+ */
+
+/* 挑战按钮文字样式 */
+.challenge-button,
+.challenge-button * {
+  color: #ffffff !important;
+}
+
+.challenge-button p {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.challenge-button span {
+  color: #0ab5e4 !important;
+  font-weight: 600;
+}
+
+/* 已解决的挑战 */
+.challenge-button.challenge-solved {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+  border-color: #28a745 !important;
+}
+
+.challenge-button.challenge-solved p,
+.challenge-button.challenge-solved span {
+  color: #ffffff !important;
+}
+
+/* 挑战按钮悬停效果 */
+.challenge-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10, 181, 228, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* 分类标题 */
+.category-header h3 {
+  color: #0ab5e4 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* 挑战内部样式 */
+.challenge-inner {
+  color: #ffffff !important;
+}
+
+.challenge-inner p {
+  color: #ffffff !important;
+  margin-bottom: 0.5rem;
+}
+
+.challenge-inner span {
+  color: #0ab5e4 !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+}

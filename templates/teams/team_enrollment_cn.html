@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="jumbotron">
+    <div class="container">
+      <h1>队伍</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center">
+        <p class="h2">欢迎来到 {{ Configs.ctf_name }}！</p>
+        <p>
+          为了参加比赛，您必须加入或创建一个队伍。
+        </p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-sm-5 col-md-4 offset-sm-1 offset-md-2 text-center mb-3">
+        <a class="btn btn-lg btn-primary w-100 py-3" href="{{ url_for('teams.join') }}">
+          <i class="fas fa-users mb-2" style="font-size: 2rem;"></i>
+          <br>
+          <strong>加入队伍</strong>
+          <br>
+          <small>输入队伍名称和密码</small>
+        </a>
+      </div>
+      <div class="col-sm-5 col-md-4 text-center mb-3">
+        <a class="btn btn-lg btn-success w-100 py-3" href="{{ url_for('teams.new_create') }}">
+          <i class="fas fa-plus-circle mb-2" style="font-size: 2rem;"></i>
+          <br>
+          <strong>创建队伍</strong>
+          <br>
+          <small>创建一个新的队伍</small>
+        </a>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-8 offset-md-2 text-center">
+        <p class="text-muted">
+          <small>
+            创建队伍后，您可以邀请其他成员加入。<br>
+            加入队伍需要队伍名称和密码。
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
