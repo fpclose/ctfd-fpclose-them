@@ -52,7 +52,18 @@
    - 在 **Theme** 下拉菜单中选择 **ctfd-fpclose**
    - 点击 **Update** 保存更改
 
-3. **验证安装**
+3. **安装首页插件（可选）**
+   
+   如需自定义首页，请安装配套的首页插件：
+   ```bash
+   cd /opt/CTFd/CTFd/plugins/
+   git clone https://github.com/fpclose/ctfd_3.8.1_shouye.git ctfd_shouye
+   docker compose restart ctfd
+   ```
+   
+   详见：[CTFd Shouye Plugin](https://github.com/fpclose/ctfd_3.8.1_shouye)
+
+4. **验证安装**
    - 访问挑战页面，应该能看到 Pipeline 背景动画
    - 检查页面背景是否有星空效果
 
